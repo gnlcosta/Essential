@@ -10,10 +10,10 @@
 	<meta http-equiv="content-type" content="text/html;">
     <meta charset="utf-8">
     <title><?php echo $title_page; ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Minimal MVC Framework">
     <meta content="Gianluca Costa <g.costa@xplico.org>" name="author"/>
-
+    
     <!-- Le styles -->
     <link href="<?php echo $ROOT_APP; ?>css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo $ROOT_APP; ?>css/base_tmpl.css" type="text/css" media="all" rel="stylesheet" />
@@ -32,7 +32,7 @@
     
     <!-- Le javascript
     ================================================== -->
-    <script src="<?php echo $ROOT_APP; ?>js/jquery-1.10.2.min.js"></script>
+    <script src="<?php echo $ROOT_APP; ?>js/jquery-1.11.2.min.js"></script>
     <script src="<?php echo $ROOT_APP; ?>js/bootstrap.min.js"></script>
     <script src="<?php echo $ROOT_APP; ?>js/jquery.qtip.min.js"></script>
     <script src="<?php echo $ROOT_APP; ?>js/base_tmpl.js"></script>  
@@ -115,12 +115,12 @@
     
     <div id="footer">
         <div class="container">
-            <p>&copy; 2012-2014 <a href="http://www.xplico.org">Gianluca Costa</a>. Licensed under MIT License.</p>
+            <p>&copy; 2012-2015 <a href="http://www.xplico.org">Gianluca Costa</a>. Licensed under MIT License.</p>
         </div>
     </div>
     <?php if (!empty($php_errors)): ?>
     <div class="php_errors">
-        <?php echo $php_errors; ?>
+        <?php if (is_array($php_errors)) print_r($php_errors); else echo $php_errors; ?>
     </div>
     <?php endif; ?>
 </body></html>
