@@ -22,6 +22,10 @@ if ($ROOT_APP == '')
 if (file_exists('../configs/configs.php')) {
     include '../configs/configs.php';
 }
+else {
+    echo 'Config file not found: <strong>'.$ROOT_DIR.'app/configs/configs.php</strong>';
+    die();
+}
 
 // session initialization ore rescuse
 if (isset($sessiondir)) {
@@ -35,6 +39,8 @@ if (isset($es_session)) {
 }
 
 ini_set('session.cookie_lifetime', $session_lifetime);
+ini_set('session.gc_maxlifetime', $session_lifetime);
+
 if (!isset($_SESSION['CREATED'])) {
     $_SESSION['CREATED'] = time();
 } else if (time() - $_SESSION['CREATED'] > $session_lifetime) {
