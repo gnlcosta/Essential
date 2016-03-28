@@ -32,10 +32,10 @@
     
     <!-- Le javascript
     ================================================== -->
-    <script src="<?php echo $ROOT_APP; ?>js/jquery-1.11.2.min.js"></script>
+    <script src="<?php echo $ROOT_APP; ?>js/jquery.min.js"></script>
     <script src="<?php echo $ROOT_APP; ?>js/bootstrap.min.js"></script>
     <script src="<?php echo $ROOT_APP; ?>js/jquery.qtip.min.js"></script>
-    <script src="<?php echo $ROOT_APP; ?>js/base_tmpl.js"></script>  
+    <script src="<?php echo $ROOT_APP; ?>js/base_tmpl.js"></script>
     <?php
         if (isset($custom_js)) {
              if (is_array($custom_js)) {
@@ -115,7 +115,7 @@
     
     <div id="footer">
         <div class="container">
-            <p>&copy; 2012-2015 <a href="http://www.xplico.org">Gianluca Costa</a>. Licensed under MIT License.</p>
+            <p>&copy; 2012-2016 <a href="http://www.xplico.net">Gianluca Costa</a>. Licensed under MIT License.</p>
         </div>
     </div>
     <?php if (!empty($php_errors)): ?>
